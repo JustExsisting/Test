@@ -11,12 +11,12 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody rb;
     void Update()
     {
-        if (Input.touchCount == 1)
-            SetTarget();
+        if (Input.touchCount == 1) SetTarget(); //Для сеснора
 
-        if (Input.GetMouseButtonDown(0)) SetTarget();
+        if (Input.GetMouseButtonDown(0)) SetTarget();//Для мыши
         if (target) transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        rb.velocity = new Vector3(joystick.Horizontal * speed,
+        
+        rb.velocity = new Vector3(joystick.Horizontal * speed,//Для джойстика
                           rb.velocity.y,
                           joystick.Vertical * speed);
     }
@@ -32,11 +32,11 @@ public class PlayerMove : MonoBehaviour
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         {
-            if (hit.collider == null) return;
+            if (hit.collider == null) return; //если ничего ничего не задели -> выход
 
-            if (target) Destroy(target.gameObject);
+            if (target) Destroy(target.gameObject); //уделение точки, если кликнули 2ой раз
 
-            GameObject newTarget = Instantiate(Resources.Load("Point"), hit.point, Quaternion.identity) as GameObject;
+            GameObject newTarget = Instantiate(Resources.Load("Point"), hit.point, Quaternion.identity) as GameObject; //создание новой точки для движения
 
             target = newTarget.transform;
         }

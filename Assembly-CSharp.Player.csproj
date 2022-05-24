@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\Move.cs" />
+    <Compile Include="Assets\JoystickTouched.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\TouchBase.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
@@ -66,10 +66,8 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
-    <Compile Include="Assets\Touch.cs" />
     <Compile Include="Assets\PlayerMove.cs" />
     <Compile Include="Assets\Triger.cs" />
-    <Compile Include="Assets\JoystickTouched.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
