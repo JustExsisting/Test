@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody rb;
     void Update()
     {
-        if (Input.touchCount == 1) SetTarget(); //Для сеснора
+        //if (Input.touchCount == 1) SetTarget(); //Для сеснора
 
         if (Input.GetMouseButtonDown(0)) SetTarget();//Для мыши
         if (target) transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
